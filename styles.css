@@ -373,3 +373,63 @@ body {
     margin-bottom: 10px;
 }
 
+.aboutMe-info__avatar {
+    border-radius: 5%;
+    width: 150px;
+    height: 225px;
+    object-fit: cover;
+    border: 3px solid;
+    border-color: var(--text-decoration-color);
+    float: left;
+    scale: 0.5;
+}
+.aboutMe-info__avatar:hover {
+    width: 225px;
+    height: 330px;
+}
+.myContainer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.myColumn {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.myColumn span{
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.aboutMe-div_for_avatar {
+    align-items: center;
+}
+.finish {
+    color: white;
+    margin-left: 10px;
+}
+
+.finish2 {
+    color: white;
+    margin-left: 10px;
+}
+
+.finish2:hover {
+    background-color: rgb(59, 51, 66);
+}
+@media screen and (max-width: 576px) {
+    .myContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .myColumn {
+        width: 100%;
+        align-content: center;
+        margin-top: 10px;
+    }
+}
