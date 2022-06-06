@@ -41,7 +41,6 @@ function mirror() {
             let timer = setInterval(() => {
                 pashal.style.marginRight = start + 'px';
                 start -= step;
-                console.log(pashal.style.marginRight);
                 if (parseInt(pashal.style.marginRight) <= 0) {
                     clearInterval(timer);
                     pashal.style.marginRight = 0 + 'px'
@@ -54,5 +53,27 @@ function mirror() {
         toggle = !toggle
     });
 }
+
+function openInformation() {
+    let pashal = document.querySelector('.pashal');
+    const mainInformation = document.querySelector('#mainInformation');
+    const aboutMe = document.querySelector('#aboutMe');
+
+    pashal.addEventListener('click', () => {
+        window.scrollTo(0, window.outerHeight);
+        mainInformation.classList.add('hidden');
+        setTimeout(()=> {
+            mainInformation.style.display = 'none';
+            aboutMe.style.display = 'block';
+        }, 1000);
+        setTimeout(()=> {
+            aboutMe.classList.add('active');
+        }, 1500)
+        
+    })
+    
+}
+
+openInformation()
 mirror();
 

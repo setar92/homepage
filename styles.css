@@ -25,6 +25,21 @@ body {
     margin: 0 auto;
     padding: 0 30px;
     max-width: 900px;
+    transform: scale(1);
+    transition: 1s all;
+}
+
+.container.hidden{
+    transform: scale(0);
+}
+
+.container.aboutMe {
+    display: none;
+    transform: scale(0);
+    transition: 1s all;
+}
+.container.aboutMe.active {
+    transform: scale(1);
 }
 
 .fh {
@@ -347,3 +362,14 @@ body {
     margin-top: -30px;
     cursor: pointer;
 }
+.pashal:hover {
+    background-color: rgb(123, 208, 185);
+   
+}
+
+#aboutMe h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
